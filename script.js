@@ -18,13 +18,7 @@ function compareGuesses(human, computer, generateTarget) {
     }
 };
 
-const updateScore = winner => {
-    if (winner === "human") {
-        return humanScore++;
-    } else {
-        return computerScore++;
-    }
-};
+const updateScore = (winner) => winner === "human" ? humanScore++ : computerScore++;
 
 function advanceRound() {
     return currentRoundNumber++;
