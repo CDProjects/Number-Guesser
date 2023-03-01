@@ -6,7 +6,7 @@ let currentRoundNumber = 1;
 
 function generateTarget() {
     return Math.floor(Math.random() * 10);
-}
+};
 
 function compareGuesses(human, computer, generateTarget) {
     if (Math.abs(human - generateTarget) < Math.abs(computer - generateTarget)) {
@@ -16,4 +16,12 @@ function compareGuesses(human, computer, generateTarget) {
     } else {
         return false;
     }
-}
+};
+
+const updateScore = winner => {
+    if (winner === "human") {
+        return humanScore + 1;
+    } else {
+        return computerScore + 1;
+    }
+};
