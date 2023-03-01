@@ -20,12 +20,13 @@ function compareGuesses(human, computer, generateTarget) {
 
 const updateScore = winner => {
     if (winner === "human") {
-        return humanScore + 1;
+        return humanScore++;
     } else {
-        return computerScore + 1;
+        return computerScore++;
     }
 };
 
 function advanceRound() {
-    return currentRoundNumber + 1;
+    return currentRoundNumber++;
 };
+
