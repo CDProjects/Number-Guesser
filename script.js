@@ -5,22 +5,23 @@ let currentRoundNumber = 1;
 // Write your code below:
 
 function generateTarget() {
-    return Math.floor(Math.random() * 10);
-};
+  return Math.floor(Math.random() * 10);
+}
 
 function compareGuesses(human, computer, generateTarget) {
-    if (Math.abs(human - generateTarget) < Math.abs(computer - generateTarget)) {
-        return true;
-    } else if (Math.abs(human - generateTarget) === Math.abs(computer - generateTarget)) {
-        return true;
-    } else {
-        return false;
-    }
-};
+  if (
+    Math.abs(human - generateTarget) < Math.abs(computer - generateTarget) ||
+    Math.abs(human - generateTarget) === Math.abs(computer - generateTarget)
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
-const updateScore = (winner) => winner === "human" ? humanScore++ : computerScore++;
+const updateScore = (winner) =>
+  winner === "human" ? humanScore++ : computerScore++;
 
 function advanceRound() {
-    return currentRoundNumber++;
-};
-
+  return currentRoundNumber++;
+}
