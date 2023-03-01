@@ -25,3 +25,7 @@ const updateScore = winner => {
         return computerScore + 1;
     }
 };
+
+function advanceRound() {
+    return currentRoundNumber + 1;
+};
